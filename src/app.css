@@ -1,1 +1,5 @@
-@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+@plugin "daisyui";
+
+/* Add your custom styles below this line */
