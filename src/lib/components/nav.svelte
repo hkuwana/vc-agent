@@ -38,63 +38,75 @@
 
 <header
 	class={{
-		'fixed top-0 right-0 left-0 z-50 flex items-center border-b': true,
+		'fixed top-0 right-0 left-0 z-50 w-full border-b shadow-sm': true,
 		'bg-base-100': !isScrolled,
-		'bg-base-100/80 backdrop-blur-sm': isScrolled
+		'bg-base-100/90 backdrop-blur-md': isScrolled
 	}}
 >
-	<nav class="container flex h-16 items-center justify-between">
-		<a href="#hero" class="flex items-center gap-2">
-			<span class="text-lg font-semibold">VC Analyst Agent</span>
-		</a>
+	<div class="container mx-auto px-4">
+		<nav class="flex h-16 items-center justify-between">
+			<a href="#hero" class="flex items-center gap-2">
+				<span class="text-primary text-xl font-bold">VC Analyst Agent</span>
+			</a>
 
-		<!-- Desktop Nav -->
-		<div class="hidden items-center gap-6 md:flex">
-			<a
-				href="#how-it-works"
-				class="text-base-content/70 hover:text-base-content text-sm font-medium">How it Works</a
+			<!-- Desktop Nav -->
+			<div class="hidden items-center gap-6 md:flex">
+				<a
+					href="#how-it-works"
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
+					>How it Works</a
+				>
+				<a
+					href="#features"
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
+					>Features</a
+				>
+				<a
+					href="#contact"
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
+					>Contact</a
+				>
+				<button class="btn btn-primary">Join Waitlist</button>
+				<button class="btn btn-ghost btn-circle" onclick={toggleTheme}>
+					{#if theme === 'light'}
+						<Moon class="h-5 w-5" />
+					{:else}
+						<Sun class="h-5 w-5" />
+					{/if}
+				</button>
+			</div>
+
+			<!-- Mobile Menu Button -->
+			<button
+				class="btn btn-ghost btn-circle md:hidden"
+				onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
 			>
-			<a href="#features" class="text-base-content/70 hover:text-base-content text-sm font-medium"
-				>Features</a
-			>
-			<a href="#contact" class="text-base-content/70 hover:text-base-content text-sm font-medium"
-				>Contact</a
-			>
-			<button class="btn btn-primary">Join Waitlist</button>
-			<button class="btn btn-ghost btn-circle" onclick={toggleTheme}>
-				{#if theme === 'light'}
-					<Moon class="h-5 w-5" />
-				{:else}
-					<Sun class="h-5 w-5" />
-				{/if}
+				<MenuIcon class="h-5 w-5" />
 			</button>
-		</div>
-
-		<!-- Mobile Menu Button -->
-		<button
-			class="btn btn-ghost btn-circle md:hidden"
-			onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
-		>
-			<MenuIcon class="h-5 w-5" />
-		</button>
-	</nav>
+		</nav>
+	</div>
 
 	<!-- Mobile Menu -->
 	{#if isMobileMenuOpen}
-		<div class="bg-base-100 absolute top-16 right-0 left-0 border-b p-4 md:hidden">
+		<div class="bg-base-100 w-full border-b p-4 shadow-md md:hidden">
 			<nav class="flex flex-col gap-4">
 				<a
 					href="#how-it-works"
-					class="text-base-content/70 hover:text-base-content text-sm font-medium">How it Works</a
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
+					>How it Works</a
 				>
-				<a href="#features" class="text-base-content/70 hover:text-base-content text-sm font-medium"
+				<a
+					href="#features"
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
 					>Features</a
 				>
-				<a href="#contact" class="text-base-content/70 hover:text-base-content text-sm font-medium"
+				<a
+					href="#contact"
+					class="text-base-content/70 hover:text-primary text-sm font-medium transition-colors"
 					>Contact</a
 				>
 				<button class="btn btn-primary w-full">Join Waitlist</button>
-				<button class="btn btn-ghost" onclick={toggleTheme}>
+				<button class="btn btn-ghost w-full justify-start" onclick={toggleTheme}>
 					{#if theme === 'light'}
 						<Moon class="mr-2 h-5 w-5" /> Switch to Dark Mode
 					{:else}

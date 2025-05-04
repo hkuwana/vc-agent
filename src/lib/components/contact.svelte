@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { MailIcon, SendIcon } from '@lucide/svelte';
 
-	let name = '';
-	let email = '';
-	let message = '';
-	let submitted = false;
+	let name = $state('');
+	let email = $state('');
+	let message = $state('');
+	let submitted = $state(false);
 
 	function handleSubmit() {
 		// In a real implementation, you would send this data to a server
@@ -21,7 +21,10 @@
 	}
 </script>
 
-<section id="contact" class="container py-20">
+<section
+	id="contact"
+	class="container flex min-h-screen max-w-md flex-col items-center justify-center"
+>
 	<div class="mx-auto mb-10 max-w-3xl text-center">
 		<h2 class="text-3xl font-bold sm:text-4xl">Get in Touch</h2>
 		<p class="text-base-content/70 mt-4">
@@ -30,64 +33,19 @@
 		</p>
 	</div>
 
-	<div class="mx-auto max-w-md">
+	<div class="mx-auto">
 		{#if submitted}
 			<div class="alert alert-success">
 				<MailIcon class="h-6 w-6" />
 				<span>Thank you! Your message has been sent.</span>
 			</div>
 		{:else}
-			<form on:submit|preventDefault={handleSubmit} class="card bg-base-100 shadow-xl">
-				<div class="card-body">
-					<div class="form-control w-full">
-						<label for="name" class="label">
-							<span class="label-text">Name</span>
-						</label>
-						<input
-							type="text"
-							id="name"
-							bind:value={name}
-							required
-							class="input input-bordered w-full"
-							placeholder="Your name"
-						/>
-					</div>
-
-					<div class="form-control w-full">
-						<label for="email" class="label">
-							<span class="label-text">Email</span>
-						</label>
-						<input
-							type="email"
-							id="email"
-							bind:value={email}
-							required
-							class="input input-bordered w-full"
-							placeholder="Your email"
-						/>
-					</div>
-
-					<div class="form-control w-full">
-						<label for="message" class="label">
-							<span class="label-text">Message</span>
-						</label>
-						<textarea
-							id="message"
-							bind:value={message}
-							required
-							class="textarea textarea-bordered h-32"
-							placeholder="Your message"
-						></textarea>
-					</div>
-
-					<div class="card-actions mt-4 justify-end">
-						<button type="submit" class="btn btn-primary">
-							Send Message
-							<SendIcon class="ml-2 h-4 w-4" />
-						</button>
-					</div>
-				</div>
-			</form>
+			<div class="card-actions mt-4 justify-end">
+				<button type="submit" class="btn btn-primary">
+					Send Message
+					<SendIcon class="ml-2 h-4 w-4" />
+				</button>
+			</div>
 		{/if}
 	</div>
 </section>

@@ -39,11 +39,11 @@
 
 <div class="bg-background text-foreground flex min-h-dvh flex-col">
 	<Nav />
-	<main>
-		<Hero />
-		<HowItWorks />
-		<Features />
-		<Contact />
-	</main>
+
+	<Hero />
+	<HowItWorks />
+	<Features />
+	<Contact />
+
 	<Footer />
 </div>
