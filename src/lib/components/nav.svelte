@@ -61,7 +61,7 @@
 				>Contact</a
 			>
 			<button class="btn btn-primary">Join Waitlist</button>
-			<button class="btn btn-ghost btn-circle" on:click={toggleTheme}>
+			<button class="btn btn-ghost btn-circle" onclick={toggleTheme}>
 				{#if theme === 'light'}
 					<Moon class="h-5 w-5" />
 				{:else}
@@ -73,7 +73,7 @@
 		<!-- Mobile Menu Button -->
 		<button
 			class="btn btn-ghost btn-circle md:hidden"
-			on:click={() => (isMobileMenuOpen = !isMobileMenuOpen)}
+			onclick={() => (isMobileMenuOpen = !isMobileMenuOpen)}
 		>
 			<MenuIcon class="h-5 w-5" />
 		</button>
@@ -94,7 +94,7 @@
 					>Contact</a
 				>
 				<button class="btn btn-primary w-full">Join Waitlist</button>
-				<button class="btn btn-ghost" on:click={toggleTheme}>
+				<button class="btn btn-ghost" onclick={toggleTheme}>
 					{#if theme === 'light'}
 						<Moon class="mr-2 h-5 w-5" /> Switch to Dark Mode
 					{:else}
