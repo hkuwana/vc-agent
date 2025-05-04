@@ -21,11 +21,8 @@
 	}
 </script>
 
-<section
-	id="contact"
-	class="container flex min-h-screen max-w-md flex-col items-center justify-center"
->
-	<div class="mx-auto mb-10 max-w-3xl text-center">
+<section id="contact" class="container flex min-h-screen flex-col items-center justify-center">
+	<div class="mx-auto mb-10 text-center">
 		<h2 class="text-3xl font-bold sm:text-4xl">Get in Touch</h2>
 		<p class="text-base-content/70 mt-4">
 			Interested in learning more? Send us a message or email directly at
