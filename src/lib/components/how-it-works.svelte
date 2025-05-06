@@ -43,7 +43,7 @@
 >
 	<div class="container mx-auto px-4">
 		<div class="mx-auto mb-16 max-w-3xl text-center">
-			<h2 class="mb-4 text-4xl font-bold">How It Works</h2>
+			<h2 class="mb-4 text-4xl font-bold">How We Work</h2>
 			<div class="divider mx-auto max-w-xs"></div>
 			<p class="text-base-content/70 mt-4 text-lg">
 				Our intelligent agent streamlines your VC deal flow analysis in four simple steps
