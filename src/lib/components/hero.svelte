@@ -2,7 +2,7 @@
 	import { ArrowRightIcon } from '@lucide/svelte';
 </script>
 
-<section id="hero" class="container flex min-h-[calc(100vh-4rem)] items-center py-20">
+<section id="hero" class="  flex min-h-[calc(100vh-4rem)] items-center py-20">
 	<div class="mx-auto flex max-w-3xl flex-col items-center text-center">
 		<h1 class="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl">
 			Automate Your VC Deal Flow Analysis

@@ -21,7 +21,7 @@
 	}
 </script>
 
-<section id="contact" class="container flex min-h-screen flex-col items-center justify-center">
+<section id="contact" class="  flex min-h-screen flex-col items-center justify-center">
 	<div class="mx-auto mb-10 text-center">
 		<h2 class="text-3xl font-bold sm:text-4xl">Get in Touch</h2>
 		<p class="text-base-content/70 mt-4">

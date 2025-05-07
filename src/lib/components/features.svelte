@@ -38,20 +38,19 @@
 			<div
 				class="group card bg-base-100 border-base-200 transform border shadow transition-transform duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
 			>
-				<div class="card-body flex flex-col items-center space-y-4 p-6 text-center">
+				<div class="card-body items-center space-y-2 text-center md:p-6">
 					<div
 						class="bg-primary/10 group-hover:bg-primary/20 rounded-full p-4 transition-colors duration-300"
 					>
 						<svelte:component this={feature.icon} class="text-primary h-8 w-8" />
 					</div>
-					<div>
-						<h3
-							class="card-title group-hover:text-primary text-lg font-semibold transition-colors duration-300"
-						>
-							{feature.title}
-						</h3>
-						<p class="text-base-content/60">{feature.description}</p>
-					</div>
+
+					<h3
+						class="card-title group-hover:text-primary text-lg font-semibold transition-colors duration-300"
+					>
+						{feature.title}
+					</h3>
+					<p class="text-base-content/60">{feature.description}</p>
 				</div>
 			</div>
 		{/each}
